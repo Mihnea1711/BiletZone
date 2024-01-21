@@ -1,0 +1,80 @@
+.container {
+    max-width: 800px; 
+    margin: auto; 
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+  
+  .my_button {
+    text-align: center;
+    
+  }
+  
+  .save-button {
+    background-color:#188A8C;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .save-button:hover {
+    background-color: #116466;
+  }
+
+  .form-container {
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    padding: 5px; 
+    background-color: #E6CBB3;
+  }
+  
+  .scrollable-form {
+    max-height: 380px;
+    overflow-y: auto; 
+    padding-right: 10px; 
+  }
+
+  .scrollable-form label {
+    color: black;
+  }
+
+  .scrollable-form div {
+    padding: 0 15px 0 20px;
+  }
+  
+  .form-title
+  {
+    text-align: center;
+    color: black;
+    font-weight: 500;
+  }
+
+.form-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-column {
+  width: 48%;
+}
+
+.narrow-input {
+  width: 60%; /* Poți ajusta lățimea după nevoie */
+  margin: 0 auto;
+}
+
+.form-group {
+  text-align: center; /* Centrează textul */
+}
+

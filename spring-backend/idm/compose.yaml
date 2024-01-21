@@ -1,0 +1,11 @@
+services:
+  idm_mariadb:
+    image: 'mariadb:latest'
+    container_name: 'idm_mariadb'
+    environment:
+      - 'MARIADB_USER=username'
+      - 'MARIADB_PASSWORD=password'
+      - 'MARIADB_ROOT_PASSWORD=thisshouldbeabettersecret'
+      - 'MARIADB_DATABASE=idm_db'
+    ports:
+      - '3307:3306'

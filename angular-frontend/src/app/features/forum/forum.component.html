@@ -1,0 +1,33 @@
+<!-- forum.component.html -->
+<div class="space"></div>
+<div class="container mt-5">
+  <div class="marele"><h1>We love to have fun together so leave your opinion below</h1></div>
+
+  <ng-container *ngIf="messages !== null && messages !== undefined && messages.length > 0; else noMessagesTemplate">
+    <div *ngFor="let message of messages" class="message-container existing-message">
+      <div class="d-flex align-items-center">
+        <div class="label">
+          <img src="../../../assets/images/happy_user.jpg" alt="Icon utilizator" class="user-icon me-2">
+        </div>
+        
+        <div class="message">
+          <p>{{ message.messageText }}</p>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  
+  <ng-template #noMessagesTemplate>
+    <div class="no-messages">
+      <p>No one has posted yet. Be the first!</p>
+    </div>
+  </ng-template>
+
+  <div class="new-message">
+    <div class="d-flex align-items-center justify-content-end message-input-section">
+      <img src="../../../assets/images/user.png" alt="Icon utilizator" class="user-icon me-2">
+      <textarea [(ngModel)]="newMessage" placeholder="Add a message ..." class="form-control"></textarea>
+      <button (click)="addMessage()" class="btn btn-primary"><mat-icon>send</mat-icon></button>
+    </div>
+  </div>
+</div>

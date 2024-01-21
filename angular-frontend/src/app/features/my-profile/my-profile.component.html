@@ -1,0 +1,36 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <div class="profile-container">
+    <div class="profile-info">
+      <h1>My Profile</h1>
+      <div class="profile-details">
+        <div class="profile-detail">
+          <p><strong>First Name:</strong></p>
+          <p><strong>Last Name:</strong></p>
+          <p *ngIf="profile.email"><strong>Email:</strong></p>
+          <p><strong>Phone Number:</strong></p>
+        </div>
+        <div class="profile-detail">
+          <p>{{ profile.firstName }}</p>
+          <p>{{ profile.lastName }}</p>
+          <p *ngIf="profile.email">{{ profile.email }}</p>
+          <p>{{ profile.phoneNumber }}</p>
+        </div>
+      </div>
+      <button class="edit-button"> <a routerLink="/edit-profile" style="text-decoration: none; color:white"> Edit Profile </a> </button>
+      <br>
+      <br>
+      <div class="points-container">
+        <p *ngIf="profile.points">You have accumulated {{ profile.points }} loyalty points &#11088;</p>
+      </div>
+    </div>
+  </div>
+

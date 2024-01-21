@@ -1,0 +1,20 @@
+#tabs-container {
+  background-color: #188A8C;
+}
+
+.row .col a {
+  padding: 0rem 1rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.row .col a:hover {
+  font-size: 1.4rem;
+}
+
+.nav-link {
+  color: white;
+}

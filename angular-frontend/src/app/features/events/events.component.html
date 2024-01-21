@@ -1,0 +1,24 @@
+<div class=" main-container container-fluid main-container">
+    <div class="row flex-nowrap">
+            <div class="row d-flex justify-content-center" >
+                <div class="col-11 justify-content-center">
+                    <div class="row d-flex" *ngIf="pagedItems && pagedItems.length > 0; else noEventsTemplate">
+                        <div class="d-flex justify-content-center align-items-center mt-2">
+                            <mat-paginator class="custom-paginator" [length]="items.length / pagedItems.length" [pageSize]="getPageSize()" [pageSizeOptions]="pageSizeOptions" (page)="onPageChange($event)"></mat-paginator>
+                        </div>
+                        <div class="content">
+                            <div class="d-flex justify-content-center flex-wrap px-5">
+                                <app-event-card-forum *ngFor="let item of pagedItems" [id]="item.id" [image]="item.image" [name]="item.name" [type]="item.type" [isFavourite]="item.isFavourite"></app-event-card-forum>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="no-events"></div>
+                    <ng-template class="row d-flex" style="background-color: black;" #noEventsTemplate>
+                        <div class="d-flex justify-content-center align-items-center text-center">
+                            <p id="no-events" class="fs-4 align-self-center">No events available</p>
+                        </div>
+                    </ng-template>
+                </div>
+            </div>
+    </div>
+</div>

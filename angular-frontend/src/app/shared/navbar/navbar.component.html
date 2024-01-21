@@ -1,0 +1,60 @@
+<div class="fixed-top" id="navbar-container">
+	<nav class="navbar navbar-expand-lg pt-2">
+		<div class="container-fluid">
+			<a class="navbar-brand ps-5" href="/home"><img class="logo" src="../../../assets/images/logo.png"></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<div class="d-flex col-4 justify-content-center">
+					<ul class="navbar-nav">
+						<li class="nav-item pe-5">
+							<div class="ps-3">
+								<!-- <a href="/favorites" id="on-favourites" class="nav-link text-center" (click)="onFavorites()"> -->
+								<a id="on-favourites" class="nav-link text-center" (click)="onFavorites()" [class.disabled]="!isOnHomePage">
+									<div class="label"><mat-icon class="nav-icon">favorite</mat-icon></div>
+									<div class="label">Favorites</div>
+								</a>
+									  
+							</div>
+						</li>
+						<li *ngIf="isAdmin" class="nav-item pe-5">
+							<div class="px-3">
+								<a href="users" class="nav-link text-center">
+									<div class="label"><mat-icon class="nav-icon">people</mat-icon></div>
+									<div class="label">Users</div>
+								</a>
+							</div>	
+						</li>
+						<li class="nav-item dropdown pe-3">
+							<a class="nav-link dropdown-toggle text-center" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<div class="label"><mat-icon class="nav-icon">person</mat-icon></div>
+								<div class="label"><span class="label-text">Account</span></div>
+							</a>
+							<ul class="dropdown-menu custom-dd-menu" aria-labelledby="navbarDropdown">
+								<li class="text-center"><a class="dropdown-item custom-dd-item" href="/my-profile">Profile</a></li>
+								<li class="text-center"><a class="dropdown-item custom-dd-item" href="/my-tickets">My Tickets</a></li>
+								<li><hr class="dropdown-divider"></li>
+								<li class="text-center"><a *ngIf="!isLoggedIn()" class="dropdown-item custom-dd-item" href="/register">Sign In</a></li>
+								<li class="text-center"><a *ngIf="!isLoggedIn()" class="dropdown-item custom-dd-item" href="/login">Log In</a></li>
+								<li class="text-center"><a *ngIf="isLoggedIn()" class="dropdown-item custom-dd-item" (click)="onLogout()">Log Out</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="col-8">      
+					<form class="d-flex px-4 justify-content-center" (submit)="onSearch()" [attr.disabled]="!isOnHomePage ? true : null">						
+						<div class="input-group rounded">
+							<input [(ngModel)]="searchQueryValue" type="search" class="form-control" placeholder="Search Event" aria-label="Search" aria-describedby="search-addon" [ngModelOptions]="{standalone: true}" />
+							<button class="btn btn-outline-light d-flex" id="search-btn" type="submit" [disabled]="!isOnHomePage"><mat-icon>search</mat-icon></button>
+						</div>
+					</form>
+					
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+	<app-navtabs></app-navtabs>
+</div>
+

@@ -1,0 +1,58 @@
+<div class="sidebar-container">
+    <div class="sidebar w-100 p-1">
+        <div class="sidebar-title"><span class="h3">Filters</span></div>
+  
+        <!-- Group 1: Oras -->
+        <hr class="my-4">
+        <div class="sidebar-group">
+            <label class="mb-3 h4">City</label>
+            <select class="form-control" [(ngModel)]="selectedCity">
+                <option value="">See All</option>
+                <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+            </select>
+        </div>
+  
+        <!-- Group 2: Pret -->
+        <!-- <hr class="my-4">
+        <div class="sidebar-group">
+            <label class="h4">Price</label>
+            <div class="price-inputs">
+                <label>Min:</label>
+                <input class="form-control my-2" type="number" [(ngModel)]="selectedMinPrice" (blur)="onInputBlur()">
+                
+                <label>Max:</label>
+                <input class="form-control my-2" type="number" [(ngModel)]="selectedMaxPrice" (blur)="onInputBlur()">
+            </div>
+        </div> -->
+        <!-- Group 2: Pret -->
+        <hr class="my-4">
+        <div class="sidebar-group">
+            <label class="h4">Date</label>
+            <div class="price-inputs">
+                <label>After Than:</label>
+                <!-- Datepicker for Min Date -->
+                <input class="form-control my-2" type="date" [(ngModel)]="selectedBeforeThanDate" (blur)="onInputBlur()">
+                
+                <label>Before Than:</label>
+                <!-- Datepicker for Max Date -->
+                <input class="form-control my-2" type="date" [(ngModel)]="selectedAfterThanDate" (blur)="onInputBlur()">
+            </div>
+        </div>
+
+  
+        <!-- Group 3: Event Type -->
+        <hr class="my-4">
+        <div class="sidebar-group">
+            <label class="mb-3 h4">Event Type</label>
+            <select class="form-control" [(ngModel)]="selectedEventType">
+                <option value="">See All</option>
+                <option *ngFor="let eventType of eventTypes" [value]="eventType">{{ eventType }}</option>
+            </select>
+        </div>
+        
+        <div class="d-flex flex-row-reverse">
+            <button class="btn btn-outline-light mt-4" (click)="applyFilters()">Apply Filters</button>
+        </div>
+    </div>
+</div>
+  

@@ -1,0 +1,49 @@
+button {
+    border-radius: 30px; /* Ajustează raza pentru a obține efectul dorit */
+    padding: 10px 15px; /* Ajustează padding-ul pentru a menține dimensiunea butonului */
+    display: inline-block;
+    color: #fff; /* Culoarea textului */
+    cursor: pointer; /* Transformă cursorul în mână la hover */
+  }
+  
+  /* Stil suplimentar pentru efect de hover */
+button:hover {
+    background-color: #116466; /* Culoare de fundal la hover */
+    color: rgb(245, 237, 228);
+  }
+
+
+.container{
+    width: 35%;
+    justify-content: center;
+}
+
+.btn{
+    margin-top: 30px;
+    background-color: #188A8C;
+}
+
+.card {
+  background-color: #E6CBB3;
+  border-radius: 5px;
+  margin-top: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.card-header{
+  background-color: #188A8C;
+  color: white;
+  font-size: large;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.card-body{
+  background-color:  #E6CBB3;
+  font-size: medium;
+}
+
+img{
+  max-width: 500px;
+  margin-right: 100px;
+}

@@ -1,0 +1,67 @@
+.nav-item a {
+    font-size: 1.1rem;
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.nav-item .nav-icon {
+    transition: margin-bottom 0.3s, transform 0.3s ease-in-out;
+}
+
+nav {
+    background-color: #116466;
+}
+/* 
+.nav-item:hover .label{
+    font-size: 1.5rem;
+} */
+
+.nav-item:hover .nav-icon {
+    transform: scale(1.6);
+} 
+
+#on-favourites {
+    cursor: pointer;
+}
+
+.label {
+    color: white;
+}
+
+.logo {
+    max-width: 95px;
+    max-height: auto;
+}
+
+.custom-dd-menu {
+    background-color: #eee2dc;
+}
+
+.custom-dd-item {
+    color: black;
+}
+
+.custom-dd-item:hover {
+    background-color: #e6cbb3;
+}
+
+#search-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+a.disabled {
+    pointer-events: none;
+    opacity: 0.5;  /* You can adjust the opacity as needed */
+    cursor: not-allowed;
+  }
+
+  form[disabled] {
+    pointer-events: none;
+    opacity: 0.5;  /* You can adjust the opacity as needed */
+    cursor: not-allowed;
+  }
+  
+  button[disabled] {
+    cursor: not-allowed;
+  }
+  

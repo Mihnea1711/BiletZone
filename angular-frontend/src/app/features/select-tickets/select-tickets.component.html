@@ -1,0 +1,45 @@
+<!-- select-tickets.component.html -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+
+    
+    <div class="seat-map">
+      <div class="stage">SCENA  </div>
+      <div *ngFor="let row of rows; let i = index" class="seat-row">
+       
+        <div *ngFor="let seat of seats; let j = index"
+             class="seat"
+             [class.selected]="isSelected(i + 1, j + 1)"
+             (click)="selectSeat(i + 1, j + 1)">
+          
+        </div>
+      </div>
+    </div>
+ 
+    <div class="selected-seats">
+      <h2>Selected Seats</h2>
+      <ul>
+        <li *ngFor="let selectedSeat of selectedSeats">
+          {{ selectedSeat }}
+          <mat-icon class="delete-icon" >delete</mat-icon>
+        </li>
+      </ul>
+      <button (click)="buyTickets()">Buy Tickets</button>
+    </div>
+
+  
+</div>
+<div *ngIf="ticketLimitReached" class="ticket-limit-message">
+  Nu poți selecta mai mult de 10 bilete.
+</div>

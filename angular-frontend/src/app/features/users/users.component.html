@@ -1,0 +1,32 @@
+<div class="space"></div>
+<div class="container d-flex flex-column align-items-center">
+  <div class="card-header py-3">Add new user</div>
+
+  <div class="background-container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">First name</th>
+          <th scope="col">Last name</th>
+          <th scope="col" *ngIf="!isMobile">Phone number</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let profile of profiles">
+          <td>{{ profile.firstName }}</td>
+          <td>{{ profile.lastName }}</td>
+          <td *ngIf="!isMobile">{{ profile.phoneNumber }}</td>
+          <td>
+            <button class="btn btn-danger btn-sm" (click)="deleteUser(profile)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <br />
+  <button class="btn btn-success pb-2 pt-2" (click)="navigateToAddUser()">Add User</button>
+</div>

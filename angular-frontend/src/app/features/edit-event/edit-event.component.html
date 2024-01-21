@@ -1,0 +1,98 @@
+<div class="cont"></div>
+<div class="container-addevent">
+    
+   
+    <div class="form-addevent">
+        <div class="top">
+            <h1>Edit event</h1>
+        </div>
+
+        <form class="form-container">
+            <div class="form-columns" style="gap: 80px;">
+            <div class="form-details">
+                
+                <label class="det" for="name">Name:</label>
+                <input class="input-add" type="text" id="name" name="name" [value]="name">
+
+                <label class="det" for="details">Details:</label>
+                <textarea class="input-add" id="details" name="details" [value]="description"></textarea>
+
+                <label class="det" for="city">City:</label>
+                <input class="input-add" type="text" id="city" name="city" [value]="city">
+
+                <label class="det" for="location">Location:</label>
+                <input class="input-add" type="text" id="location" name="location" [value] = "location">
+            </div>
+            <div class="ceva">
+
+                <label class="det" for="date">Date:</label>
+                <input class="input-add" type="date" id="date" name="date" [value] = "date">
+
+                <label class="det" for="type">Type event:</label>
+                <input class="input-add" type="text" id="type" name="type" [value]="type">
+            
+
+                <label class="det" for="photo">Photo url:</label>
+            <input class="input-add" type="text" id="photo" name="photo" [value]="image">
+        </div>
+            </div>
+        </form>
+    </div>
+    <div class="inner-addevent">
+        <div class="top">
+            <h1>Ticket</h1>
+        </div>
+        <div class="input-addTicket" >
+           
+            <label class="input-addTI">Ticket:</label>
+            <input class="input-addT" [(ngModel)]="newTicket" />
+            <label class="input-addTI">Price:</label>
+            <input class="input-addT" [(ngModel)]="newPrice" />
+            <label class="input-addTI">Quantity:</label>
+            <input class="input-addT" [(ngModel)]="newQuantity" />
+            <button mat-raised-button class="add-ticket" (click)="addRow()"><mat-icon>add</mat-icon>Add</button>
+        </div>
+
+            <table border="1" class="table-addevent">
+
+                <tr>
+                    <th *ngFor="let header of headers">{{ header }}</th>
+                    <th>Action</th>
+                </tr>
+                 <tr *ngFor="let item of items">
+                    <td >{{ item.name }}</td>
+                    <td >{{ item.price}}</td>
+                    <td >
+                    {{item.quantity}}
+                    </td>
+                    <td>
+                        <button style="background-color: #E6CBB3;; color: black;"(click)=" deleteRow(item.id!)"
+                            class="delete-ticket"><mat-icon>delete</mat-icon></button>
+                    </td>
+                </tr>  
+                <!-- <tr *ngFor="let row of data; let i = index">
+                    <td *ngFor="let cell of row; let j = index">
+                        <ng-container >
+                            {{ cell }}
+                        </ng-container>
+                        
+                    </td>
+                    <td>
+                        <button style="background-color: #E6CBB3;; color: black;"(click)="deleteRow(i)"
+                            class="delete-ticket"><mat-icon>delete</mat-icon></button>
+                    </td>
+                </tr> -->
+            </table>
+
+            <div class="button-add">
+                <button mat-raised-button class="save-add"><mat-icon>check</mat-icon>Save</button>
+                <button mat-raised-button class="cancel-add" ><mat-icon> cancel_presentation</mat-icon>Cancel</button>
+            </div>
+
+    </div>
+    <!-- <div class="photo-ticket">
+        <img src="../../../assets/images/image3.png">
+    </div> -->
+   
+
+</div>

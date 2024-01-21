@@ -1,0 +1,39 @@
+<div class="container-fluid main-container">
+    <div class="row flex-nowrap">
+        <div class="col-auto px-0">
+            <div *ngIf="isSidebarOpen" id="sidebar" class="collapse collapse-horizontal show border-end">
+                <div class="min-vh-100">
+                    <app-sidebar></app-sidebar>
+                </div>
+            </div>
+        </div>
+        <main [ngClass]="{'shifted': isSidebarOpen}" class="col ps-md-2 pt-2">
+            <div class="row d-flex justify-content-center" >
+                <a (click)="toggleSidebar()" href="#" data-bs-target="#sidebar" data-bs-toggle="collapse" class="fixed-left-btn col-1 m-0 p-0 text-decoration-none">
+                    <mat-icon>menu</mat-icon>
+                </a>
+                <div class="col-11 justify-content-center">
+                    <div class="row d-flex" *ngIf="pagedItems && pagedItems.length > 0; else noEventsTemplate">
+                        <div class="d-flex justify-content-center align-items-center mt-2">
+                            <mat-paginator class="custom-paginator" [length]="items.length / pagedItems.length" [pageSize]="getPageSize()" [pageSizeOptions]="pageSizeOptions" (page)="onPageChange($event)"></mat-paginator>
+                        </div>
+                        <div class="content">
+                            <div class="d-flex justify-content-center flex-wrap px-5">
+                                <app-event-card *ngFor="let item of pagedItems" [id]="item.id" [image]="item.image" [name]="item.name" [type]="item.type" [isFavourite]="item.isFavourite"></app-event-card>
+                            </div>
+                        </div>
+                    </div>
+                    <ng-template class="row d-flex" style="background-color: black;" #noEventsTemplate>
+                        <div class="d-flex justify-content-center align-items-center text-center">
+                            <p id="no-events" class="fs-4 align-self-center">No events available</p>
+                        </div>
+                    </ng-template>
+                </div>
+                <!-- Add Button (Conditionally Rendered) -->
+                <button *ngIf="isAdmin" type="button" class="btn btn-outline-secondary btn-circle d-flex justify-content-center align-items-center" (click)="onAddButtonClick()">
+                    <mat-icon id="add-icon">add</mat-icon>
+                </button>
+            </div>
+        </main>
+    </div>
+</div>

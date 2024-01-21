@@ -1,0 +1,34 @@
+.main-container {
+    display: flex;
+    margin-top: 148px;
+    margin-bottom: 60px;
+    justify-content: center; 
+}
+  
+.content {
+    flex-grow: 1;
+    padding: 15px 30px;
+    overflow-y: auto;
+}
+  
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+    gap: 16px;
+}
+
+.row{
+    justify-content: center;
+}
+
+.custom-paginator{
+    background-color: #EEE2DC;
+}
+
+.no-events{
+    margin-top: 360px;
+}
+  
+#no-events {
+    margin-top: 290px;
+}

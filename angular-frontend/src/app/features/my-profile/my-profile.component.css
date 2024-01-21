@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.profile-info {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #E6CBB3;
+  font-size: 20px;
+}
+
+.profile-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Adjust the spacing between columns */
+}
+
+.profile-detail {
+  text-align: left;
+}
+
+@media (max-width: 800px) {
+  .profile-info {
+      width: 80vw;
+  }
+
+  .profile-details {
+      flex-direction: column; /* Stack columns in small screens */
+      align-items: center;
+  }
+
+  .profile-detail {
+      margin-bottom: 10px; /* Add some spacing between stacked columns */
+  }
+}
+
+.edit-button {
+  display: flex;
+  margin-top: 20px;
+  background-color: #188A8C;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.edit-button:hover {
+  background-color: #116466;
+}

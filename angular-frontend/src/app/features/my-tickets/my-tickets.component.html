@@ -1,0 +1,42 @@
+<!-- my-tickets.component.html -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="button-group">
+    <button (click)="toggleEvents(true)" [class.active]="showUpcomingEvents">Upcoming Events</button>
+    <button (click)="toggleEvents(false)" [class.active]="!showUpcomingEvents">Past Events</button>
+  </div>
+  <table *ngIf="showUpcomingEvents ? upcomingEvents.length > 0 : pastEvents.length > 0" class="event-table">
+    <thead>
+      <tr>
+        <th>Event</th>
+        <th>Date</th>
+        <th>Tickets</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let event of showUpcomingEvents ? upcomingEvents : pastEvents">
+        <td>{{ event.name }}</td>
+        <td>{{ event.date | date }}</td>
+        <td>{{ event.tickets }}</td>
+        <td>
+          <button (click)="downloadTickets(event)">
+            <i class="material-icons">download</i> 
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="showUpcomingEvents ? upcomingEvents.length === 0 : pastEvents.length === 0" class="no-events">
+    Nu există evenimente disponibile.
+  </div>
+</div>

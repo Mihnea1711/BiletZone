@@ -1,0 +1,59 @@
+.sidebar-container {
+    position: fixed;
+    left: 0;
+    top: 148px;
+    bottom: 0;
+    width: 300px; /* Set the width of your sidebar */
+    background-color: #188A8C;
+    padding: 20px;
+    color: white;
+}
+
+.sidebar {
+    padding: 20px;
+    background-color: #188A8C;
+    color: white;
+}
+
+.sidebar.show {
+    left: 0;
+    width: 300px; /* Set the final width of your sidebar */
+  }
+
+#sidebar.closed {
+    left: -300px; /* Set to the negative width of the sidebar */
+}
+
+#sidebar.collapse-horizontal {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Set to the negative width of the sidebar */
+    transition: left 1.9s ease; /* Add a transition for smooth animation */
+}
+
+#sidebar.collapse-horizontal.show {
+    left: 0;
+}
+
+.sidebar-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.sidebar-group {
+    margin-bottom: 15px;
+}
+
+.sidebar-group .price-inputs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.sidebar-group .price-inputs label {
+    margin-bottom: 5px;
+}
+
+.sidebar-group .price-inputs input {
+    margin-bottom: 10px;
+}

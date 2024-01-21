@@ -1,0 +1,21 @@
+<a class="card-link" (click)="handleClick($event)">
+    <div class="card">
+        <div class="card-sl">
+            <div class="card-image">
+                <img class="img-fluid rounded" src="{{image}}" alt="imagename-alt" />
+            </div>
+
+            <a id="fav-icon-container" class="card-action">
+                <mat-icon id="fav-icon" class="mt-1">{{ isFavourite ? 'favorite' : 'favorite_border' }}</mat-icon>
+            </a>
+            <div class="card-heading">
+                <h5 class="card-title mt-3 fs-5">{{ name }}</h5>
+                <div class="text-center">
+                    <p class="mt-2 mb-0 fs-6 text-muted">~~~</p>
+                    <p class="mb-0 text-uppercase text-dark" style="font-size: 0.75rem;">{{ type }}</p>
+                    <p class="fs-6 text-muted">~~~</p>
+                  </div>                  
+            </div>
+        </div>
+    </div>
+</a>

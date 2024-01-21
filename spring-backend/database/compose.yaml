@@ -1,0 +1,11 @@
+services:
+  mariadb:
+    image: 'mariadb:latest'
+    container_name: 'mariadb'
+    environment:
+      - 'MARIADB_USER=username'
+      - 'MARIADB_PASSWORD=password'
+      - 'MARIADB_ROOT_PASSWORD=thisshouldbeabettersecret'
+      - 'MARIADB_DATABASE=paw_db'
+    ports:
+      - '3306:3306'

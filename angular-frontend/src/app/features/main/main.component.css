@@ -1,0 +1,95 @@
+.main-container {
+    margin-top: 148px;
+    margin-bottom: 60px;
+}
+
+main {
+  transition: margin-left 0.6s ease;
+}
+
+main.shifted {
+  margin-left: 300px; /* Set to the width of your sidebar */
+}
+  
+.content {
+    flex-grow: 1;
+    padding: 15px 0px;
+    overflow-y: auto;
+}
+  
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 250px));
+    gap: 30px;
+}
+
+.custom-paginator {
+    background-color: #EEE2DC;
+}
+
+#no-events {
+    margin-top: 290px;
+}
+
+  
+#sidebar-nav {
+    width: 160px;
+}
+
+.fixed-left-btn {
+    position: fixed;
+    left: 49px; /* Adjust the left position as needed */
+    top: 116px; /* Adjust the top position as needed */
+    z-index: 9999; /* Adjust the z-index as needed */
+    color: #FFF; /* Adjust the color as needed */
+    font-size: 20px; /* Adjust the font size as needed */
+    transform: scale(1.5);
+}  
+  
+.fixed-left-btn mat-icon:hover {
+    color: #FFF; /* Adjust the color on hover as needed */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    animation: pulsate 1s infinite, bounce 0.5s ease;
+}
+  
+@keyframes pulsate {
+    0% {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    }
+}
+  
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+}
+  
+.fixed-left-btn mat-icon::before {
+    background-color: transparent;
+}
+  
+.fixed-left-btn mat-icon:hover::before {
+    background-color: rgba(255, 255, 255, 0.8); 
+}
+
+.btn-circle {
+  margin-top: 20px;
+  border-radius: 50%;
+  width: 50px; /* Adjust the size as needed */
+  height: 50px; /* Adjust the size as needed */
+}
+
+  
+  

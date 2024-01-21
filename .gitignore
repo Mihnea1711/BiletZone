@@ -1,0 +1,70 @@
+# Angular
+/dist
+/node_modules
+/e2e
+*.log
+*.iml
+*.class
+*.jar
+*.war
+*.ear
+
+# Spring Boot
+/target
+*.log
+*.class
+*.jar
+*.war
+*.ear
+
+# IntelliJ IDEA
+.idea
+*.iws
+*.iml
+*.ipr
+/out
+
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+
+# Visual Studio Code
+.vscode
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+log/
+*.log
+
+# Maven
+target/
+
+# Gradle
+.gradle/
+build/
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# Spring Boot DevTools
+.restart/
+
+# Spring Tools
+.springBeans
+
+# Local configuration file (application-dev.properties)
+application-*.properties
+
+# Temporary files
+*.swp
+
+# Angular CLI
+.angular-cli.json
+.angular.json
