@@ -70,23 +70,6 @@ Demonstrational; a realistic scenario would involve a dedicated worker for perio
 ![main image](images/auth.png)
 ![faq image](images/logo.png)
 ![login image](images/main_page.png) -->
-<div style="display: flex; flex-wrap: wrap;">
-    <div style="flex: 33.33%; padding: 5px;">
-        <img src="images/main.png" alt="Main Image" style="width: 100%;">
-    </div>
-    <div style="flex: 33.33%; padding: 5px;">
-        <img src="images/faq.png" alt="FAQ Image" style="width: 100%;">
-    </div>
-    <div style="flex: 33.33%; padding: 5px;">
-        <img src="images/login.png" alt="Login Image" style="width: 100%;">
-    </div>
-    <div style="flex: 33.33%; padding: 5px;">
-        <img src="images/auth.png" alt="Auth Image" style="width: 100%;">
-    </div>
-    <div style="flex: 33.33%; padding: 5px;">
-        <img src="images/logo.png" alt="Logo Image" style="width: 100%;">
-    </div>
-    <div style="flex: 33.33%; padding: 5px;">
-        <img src="images/main_page.png" alt="Main Page Image" style="width: 100%;">
-    </div>
-</div>
+<img src="images/main.png"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
