@@ -70,6 +70,7 @@ Demonstrational; a realistic scenario would involve a dedicated worker for perio
 ![main image](images/auth.png)
 ![faq image](images/logo.png)
 ![login image](images/main_page.png) -->
-<img src="images/main_page.png"
+<!-- <img src="images/main_page.png"
      alt="Markdown Monster icon"
-     style="float: left; margin-right: 10px; width: 150px; height: 300px" />
+     style="float: left; margin-right: 10px; width: 150px; height: 300px" /> -->
+<img src="images/auth.png" alt="main image" width="200"/> <img src="images/logo.png" alt="faq image" width="200"/> <img src="images/main_page.png" alt="login image" width="200"/>
