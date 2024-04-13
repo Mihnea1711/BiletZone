@@ -3,18 +3,18 @@
 BiletZone is a comprehensive ticketing platform developed with Spring Java for the backend and Angular for the web frontend, along with a simplified Android application built with Kotlin. The platform enables users to browse, search, and purchase tickets for various events. Users can manage their profiles, receive event updates, and participate in event-specific forums.
 
 ### Technologies Used
-Backend: Java Spring framework
-Frontend (Web): Typescript, Angular, Bootstrap
-Frontend (Mobile): Kotlin, Android
-Database: Relational database (MariaDB)
-Microservices: Utilized for modularization and scalability
-Asynchronous Communication: WebFlux used for asynchronous communication within microservices, enabling non-blocking and reactive programming.
-API Gateway: Orchestrates communication between frontend and microservices, implements JWT token-based authorization and Java Security.
-    Implements JWT token-based authorization for secure communication between frontend and backend.
-    Utilizes Java Security with filters to restrict access to backend services, ensuring only authorized hosts (such as the frontend) can make calls.
-Email Sending: Mail microservice sends confirmation and notification emails to users using JavaMail API.
-    JavaMail API utilized for robust and reliable email delivery.
-    Supports sending confirmation and notification emails to users seamlessly.
+- Backend: Java Spring framework
+- Frontend (Web): Typescript, Angular, Bootstrap
+- Frontend (Mobile): Kotlin, Android
+- Database: Relational database (MariaDB)
+- Microservices: Utilized for modularization and scalability
+- Asynchronous Communication: WebFlux used for asynchronous communication within microservices, enabling non-blocking and reactive programming.
+- API Gateway: Orchestrates communication between frontend and microservices, implements JWT token-based authorization and Java Security.
+    - Implements JWT token-based authorization for secure communication between frontend and backend.
+    - Utilizes Java Security with filters to restrict access to backend services, ensuring only authorized hosts (such as the frontend) can make calls.
+- Email Sending: Mail microservice sends confirmation and notification emails to users using JavaMail API.
+    - JavaMail API utilized for robust and reliable email delivery.
+    - Supports sending confirmation and notification emails to users seamlessly.
 
 ### Web Frontend (Angular)
 The browser-related frontend is designed using Angular, Typescript and Bootstrap, maintaining a consistent style, theme, and color scheme across all pages. The user interface is enriched with images and styling effects to enhance the overall design.
